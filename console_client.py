@@ -5,7 +5,7 @@ from products import PRODUCT_TYPES, Product, ProductCollection, InvalidProdAttr
 from console_utils import accept, ask, show_msg, pause, cls
 
 
-PRODUCTS_CSV_PATH = 'gestao_de_produtos_3/products.csv'
+PRODUCTS_CSV_PATH = 'products.csv'
 prods_collection: ProductCollection
 
 
@@ -101,7 +101,6 @@ def exec_add():
             convert_fn=int
         )
         
-        
         # Solicita o preço do produto
         price = accept(
             msg="Indique o preço do produto: ",
@@ -109,14 +108,16 @@ def exec_add():
             convert_fn=float  # Verifique se o construtor de Product usa float ou outro tipo
         )
        
-        
-        # Aqui, vamos criar o produto com todos os parâmetros
         new_product = Product(id_, name, prod_type, quantity, price)
         print(f"Produto criado: {new_product}")
         
         # Adiciona o produto à coleção
         prods_collection.append(new_product)
         print(f"Produto adicionado à coleção.")
+
+        #salvar no ficheiro json
+
+        exec_save_catalog_to_file("catalogo.json", prods_collection)    
         
         # Exibe uma mensagem de sucesso
         show_msg(f"Produto '{name}' adicionado com sucesso!")

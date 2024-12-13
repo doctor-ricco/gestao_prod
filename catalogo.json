@@ -1,0 +1,32 @@
+[
+    {
+        "id": 30987,
+        "name": "pão de milho",
+        "quantity": 2
+    },
+    {
+        "id": 30098,
+        "name": "leite mimosa",
+        "quantity": 10
+    },
+    {
+        "id": 40001,
+        "name": "morangos da escócia",
+        "quantity": 100
+    },
+    {
+        "id": 31108,
+        "name": "ariel",
+        "quantity": 25
+    },
+    {
+        "id": 21112,
+        "name": "sonasol",
+        "quantity": 25
+    },
+    {
+        "id": 21998,
+        "name": "Leite",
+        "quantity": 29
+    }
+]
